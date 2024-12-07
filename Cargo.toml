@@ -24,7 +24,10 @@ time = "0.3"
 opt-level = 3
 codegen-units = 1
 panic = 'abort'
-lto = 'thin'
+lto = 'fat'
 debug = false
 incremental = false
 overflow-checks = false
+
+[build]
+rustflags = ["-C", "target-cpu=native"]
